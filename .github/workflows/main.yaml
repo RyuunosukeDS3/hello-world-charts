@@ -24,12 +24,12 @@ jobs:
         run: |
           helm package ./hello-world  # adjust path if your chart is in a different folder
           mkdir -p repo
-      
+
       - name: Upload package
         uses: actions/upload-artifact@v4
         with:
           name: package
-          path: *.tgz
+          path: "*.tgz"
 
   publish:
     runs-on: ubuntu-latest
