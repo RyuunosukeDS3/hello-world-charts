@@ -34,7 +34,7 @@ jobs:
 
       - name: Copy packaged chart to repo
         run: |
-          cp ../*.tgz repo/
+          cp *.tgz repo/
           cd repo
 
       - name: Update Helm repo index
