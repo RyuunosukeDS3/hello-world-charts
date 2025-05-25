@@ -33,7 +33,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-
+    needs: package
     steps:
       - name: Download and fetch gh-pages branch
         run: |
