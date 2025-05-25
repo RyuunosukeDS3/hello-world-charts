@@ -1,0 +1,53 @@
+# Default values for hello-world.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+replicaCount: 1
+
+# This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
+frontend:
+  image:
+    repository: ryuunosukeds3/hello-world-frontend
+    # This sets the pull policy for images.
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+  service:
+    # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
+    type: ClusterIP
+    # This sets the service port (default: 4200 for Angular dev server)
+    port: 4200
+
+backend:
+  image:
+    repository: ryuunosukeds3/hello-world-backend
+    # This sets the pull policy for images.
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+  service:
+    # This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
+    type: ClusterIP
+    # This sets the service port (default: 4200 for Angular dev server)
+    port: 3000
+
+# This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+ingress:
+  enabled: false
+  className: ""
+  annotations:
+    {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+        - path: /api/
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
