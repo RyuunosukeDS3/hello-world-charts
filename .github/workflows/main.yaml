@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git clone --branch gh-pages https://github.com/${{ github.repository }} repo || git clone https://github.com/${{ github.repository }} repo
+          git clone --single-branch --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} repo
           cd repo
 
       - name: Copy packaged chart to repo
@@ -41,10 +41,6 @@ jobs:
         run: |
           cd repo
           helm repo index . --url https://ryuunosukeds3.github.io/hello-world-charts
-
-      - name: Clone gh-pages branch
-        run: |
-          git clone --single-branch --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} repo
 
       - name: Commit and push changes to gh-pages
         run: |
