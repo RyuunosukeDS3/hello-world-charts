@@ -94,7 +94,7 @@ jobs:
       - name: Commit and push changes to gh-pages
         run: |
           cd repo
-          git add .
+          git add index.yaml *.tgz
           git commit -m "✏️ chore: Publish Helm chart ${{ github.sha }}" || echo "No changes to commit"
           git push origin gh-pages
         env:
