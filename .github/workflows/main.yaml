@@ -89,7 +89,7 @@ jobs:
       - name: Update Helm repo index
         run: |
           cd repo
-          helm repo index . --url https://ryuunosukeds3.github.io/hello-world-charts
+          helm repo index .
 
       - name: Commit and push changes to gh-pages
         run: |
