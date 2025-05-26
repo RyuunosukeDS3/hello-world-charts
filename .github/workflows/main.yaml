@@ -106,7 +106,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: RyuunosukeDS3/hello-world-gitops
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          token: ${{ secrets.RELEASE_TOKEN }}
           path: gitops
 
       - name: Update application.yaml with new version
