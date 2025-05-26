@@ -15,7 +15,7 @@ jobs:
       - name: Setup Helm
         uses: azure/setup-helm@v4
       - name: Helm Lint
-        run: helm lint ./charts/my-chart
+        run: helm lint ./hello-world
 
   package:
     runs-on: ubuntu-latest
