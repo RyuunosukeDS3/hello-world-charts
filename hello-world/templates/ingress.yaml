@@ -21,9 +21,9 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "mychart.fullname" . | replace "-frontend" "" }}-{{ if eq .path "/" }}frontend{{ else }}backend{{ end }}
+                name: {{ $.Release.Name }}-frontend
                 port:
-                  number: {{ if eq .path "/" }}{{ $.Values.frontend.service.port }}{{ else }}{{ $.Values.backend.service.port }}{{ end }}
+                  number: {{ $.Values.frontend.service.port }}
           {{- end }}
     {{- end }}
   {{- if .Values.ingress.tls }}
