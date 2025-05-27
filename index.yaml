@@ -3,7 +3,17 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-27T14:48:40.808381555Z"
+    created: "2025-05-27T14:56:44.004826243Z"
+    description: A Helm chart for frontend and backend
+    digest: 88e904c054c2afc489ad969a1048c538148616e8c6f0868be163515854faac1c
+    name: hello-world
+    type: application
+    urls:
+    - hello-world-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-05-27T14:56:44.004583578Z"
     description: A Helm chart for frontend and backend
     digest: 668d19a48c04fe6115c02e3e67886bbdb1a7747665d346c01c375a6d6e8e4ca0
     name: hello-world
@@ -13,7 +23,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-27T14:48:40.808133271Z"
+    created: "2025-05-27T14:56:44.004305105Z"
     description: A Helm chart for frontend and backend
     digest: 92d19241d0b20feb2e1f9dcf2492ddf873b226967296da71e7e27ab4983e3cba
     name: hello-world
@@ -23,7 +33,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-27T14:48:40.807856184Z"
+    created: "2025-05-27T14:56:44.004010432Z"
     description: A Helm chart for frontend and backend
     digest: 094a90bca0ed531059b2334687dc7d1ad5458dab9346c0de4598ac80444f9928
     name: hello-world
@@ -33,7 +43,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-27T14:48:40.807603031Z"
+    created: "2025-05-27T14:56:44.003766124Z"
     description: A Helm chart for frontend and backend
     digest: fc07cb3b0ad75cea74d8032f02f508ef446ab078c80d195692ede4ae936a6df9
     name: hello-world
@@ -43,7 +53,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-05-27T14:48:40.807184459Z"
+    created: "2025-05-27T14:56:44.003522887Z"
     description: A Helm chart for frontend and backend
     digest: 4959635e5ed95297f6fe9613ecc9e1a80053628e588d6c525f68b2dde7f653ba
     name: hello-world
@@ -51,4 +61,4 @@ entries:
     urls:
     - hello-world-0.1.1.tgz
     version: 0.1.1
-generated: "2025-05-27T14:48:40.806757251Z"
+generated: "2025-05-27T14:56:44.003114401Z"
