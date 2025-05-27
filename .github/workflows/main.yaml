@@ -44,7 +44,7 @@ jobs:
           current_version=$(yq '.version' Chart.yaml)
 
           # Read last 20 commit messages
-          commits=$(git log -n 20 --pretty=format:%s)
+          commits=$(git log -n 1 --pretty=format:%s)
 
           bump="=nothing"
           if echo "$commits" | grep -q "BREAKING CHANGE"; then
