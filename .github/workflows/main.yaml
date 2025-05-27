@@ -47,11 +47,11 @@ jobs:
           commits=$(git log -n 1 --pretty=format:%s)
 
           bump="=nothing"
-          if echo "$commits" | grep -q "BREAKING CHANGE"; then
+          if echo "$commits" | grep -q "\bBREAKING CHANGE"; then
             bump="major"
-          elif echo "$commits" | grep -q "^feat"; then
+          elif echo "$commits" | grep -q "\bfeat:"; then
             bump="minor"
-          elif echo "$commits" | grep -q "^fix"; then
+          elif echo "$commits" | grep -q "\bfix"; then
             bump="patch"
           fi
 
