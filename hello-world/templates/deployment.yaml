@@ -42,4 +42,7 @@ spec:
           imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.backend.service.port }}
+          env:
+            - name: APP_THEME
+              value: "{{ .Values.backend.defaultTheme | default "light" }}"
 
